@@ -28,7 +28,7 @@ public class Score extends JFrame {
 		this.setIconImage(icon.getImage());
 
 		JLabel sc = new JLabel("Thankyou " + name + " for playing Quiz Test");
-		sc.setBounds(10, 5, 400, 50);
+		sc.setBounds(10, 5, 550, 50);
 		sc.setFont(new Font("Tahoma", Font.BOLD, 18));
 		sc.setForeground(new Color(120, 81, 169));
 		this.add(sc);
@@ -48,7 +48,40 @@ public class Score extends JFrame {
 		scText.setForeground(new Color(120, 81, 169));
 		this.add(scText);
 
-		
+		play = new JButton("Play");
+		play.setBounds(300, 180, 80, 30);
+		play.setFont(new Font("Roboto", Font.BOLD, 18));
+		play.setFocusable(false);
+		play.setBackground(new Color(120, 81, 169));
+		play.setForeground(Color.white);
+		this.add(play);
+
+		exit = new JButton("Exit");
+		exit.setBounds(400, 180, 80, 30);
+		exit.setFont(new Font("Roboto", Font.BOLD, 18));
+		exit.setFocusable(false);
+		exit.setBackground(new Color(120, 81, 169));
+		exit.setForeground(Color.white);
+		this.add(exit);
+
+		play.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Score.this.setVisible(false);
+				new Quiz(name);
+
+			}
+		});
+
+		exit.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+
+			}
+		});
 
 		this.setVisible(true);
 
