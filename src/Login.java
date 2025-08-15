@@ -52,6 +52,7 @@ public class Login extends JFrame{
 		tf.setFont(new Font("Serif", Font.PLAIN, 18));
 		tf.setForeground(new Color(120, 81, 169));
 		this.add(tf);
+		// 2nd update
 		JButton st = new JButton("START");
 		st.setBounds(530, 235, 100, 30);
 		st.setFont(new Font("Roboto", Font.BOLD, 18));
@@ -90,7 +91,7 @@ public class Login extends JFrame{
 				JOptionPane.showMessageDialog(null, rule, "Rules", 1);
 				Login.this.setVisible(false);
 				
-				
+				new Quiz(temp);
 				
 				}catch (IllegalArgumentException et) {
 				    JOptionPane.showMessageDialog(null, et.getMessage(), "Input Error", 2);
