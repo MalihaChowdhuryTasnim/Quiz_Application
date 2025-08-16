@@ -16,4 +16,4 @@ The application includes a login screen, rules display, quiz questions, and a sc
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/MalihaChowdhuryTasnim/OOP_Quiz_Application.git
+git clone https://github.com/MalihaChowdhuryTasnim/Quiz_Application.git
